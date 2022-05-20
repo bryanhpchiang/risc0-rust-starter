@@ -3,6 +3,10 @@ name = "risc0-rust-starter-methods-guest"
 version = "0.1.0"
 edition = "2021"
 
+[dependencies]
+nalgebra = {version = "0.31.0", default-features = false, features = ["serde-serialize"]}
+serde = {version = "1.0.137", default-features = false}
+
 [build-dependencies]
 risc0-build = "0.7.0-dev.1"
 

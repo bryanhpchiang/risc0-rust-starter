@@ -1,8 +1,8 @@
-
 #![no_main]
 #![no_std]
 
 use risc0_zkvm_guest::{env};
+use nalgebra::{SMatrix};
 
 risc0_zkvm_guest::entry!(main);
 
@@ -18,6 +18,10 @@ pub fn main() {
     // Compute the product
     let c : u64 = a * b;
     // Commit it to the public journal
-    env::commit(&c);
+
+    let m = SMatrix::<u32, 3, 4>::new(11, 12, 13, 14,
+      21, 22, 23, 24,
+      31, 32, 33, 34);
+    env::commit(&m);
 }
 

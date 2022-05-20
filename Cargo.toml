@@ -9,5 +9,7 @@ risc0-zkvm-core = "0.7.0-dev.1"
 risc0-zkvm-host = "0.7.0-dev.1"
 risc0-zkvm-serde = "0.7.0-dev.1"
 serde = "1.0"
+anyhow = "1.0.57"
+nalgebra = { version = "0.31.0", features = ["serde-serialize"]}
 tempfile = "3.3"
 
