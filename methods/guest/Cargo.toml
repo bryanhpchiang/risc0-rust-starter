@@ -4,11 +4,13 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-nalgebra = {version = "0.31.0", default-features = false, features = ["serde-serialize"]}
-serde = {version = "1.0.137", default-features = false}
+nalgebra = {version = "0.31.0", default-features = false, features = ["serde-serialize-no-std"]}
+serde = {version = "1.0", default-features = false, features = ["derive"]}
 
 [build-dependencies]
 risc0-build = "0.7.0-dev.1"
 
 [target.riscv32im-unknown-none-elf.dependencies]
 risc0-zkvm-guest = "0.7.0-dev.1"
+
+

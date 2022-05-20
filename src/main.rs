@@ -34,9 +34,11 @@ fn run() -> anyhow::Result<()> {
     prover.add_input(to_vec(&b).unwrap().as_slice()).unwrap();
     // Run prover + generate receipt
     let receipt = prover.run()?;
+    println!("Got receipt.");
 
     // Extract journal of receipt (i.e. output c, where c = a * b)
-    let c : SMatrix::<u32, 3, 4> = from_slice(&receipt.get_journal_vec()?.as_slice())?;
+    let c : SMatrix::<u32, 3, 4> = from_slice(&receipt.get_journal_vec().expect("Journal vec").as_slice()).expect("Get matrix");
+    // let c: u64 = from_slice(&receipt.get_journal_vec()?.as_slice())?;
 
     // Print an assertation
     println!("I know the factors of {}, and I can prove it!", c);

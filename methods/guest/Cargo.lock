@@ -592,6 +592,7 @@ dependencies = [
  "num-complex",
  "num-rational",
  "num-traits",
+ "serde",
  "simba",
  "typenum",
 ]
@@ -621,6 +622,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "97fbc387afefefd5e9e39493299f3069e14a140dd34dc19b4c1c1a8fddb6a790"
 dependencies = [
  "num-traits",
+ "serde",
 ]
 
 [[package]]
@@ -859,6 +861,7 @@ dependencies = [
  "nalgebra",
  "risc0-build",
  "risc0-zkvm-guest",
+ "serde",
 ]
 
 [[package]]
